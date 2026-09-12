@@ -1,0 +1,371 @@
+:root {
+  --berry: #c92f59;
+  --berry-dark: #74203c;
+  --leaf: #4e7c45;
+  --leaf-dark: #285332;
+  --matcha: #dce8a4;
+  --cream: #fff7d6;
+  --pink: #ffd2d2;
+  --ink: #2d2520;
+  --lavender: #dcd6f1;
+  --sky: #bce2db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #f6e7bd;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.45;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.25;
+  background-image: radial-gradient(#6e573f 0.65px, transparent 0.65px);
+  background-size: 5px 5px;
+  mix-blend-mode: multiply;
+}
+
+a {
+  color: #8b1f49;
+}
+
+a:hover {
+  color: #3f6939;
+}
+
+.page {
+  width: min(1060px, calc(100% - 28px));
+  margin: 18px auto 38px;
+  background: var(--cream);
+  border: 4px ridge #a87553;
+  box-shadow: 8px 8px 0 rgba(96, 51, 34, 0.2);
+}
+
+.topbar {
+  padding: 6px 12px;
+  color: #fffbe8;
+  background: var(--berry-dark);
+  font:
+    bold 12px "Courier New",
+    monospace;
+  letter-spacing: 0.06em;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 34px 26px;
+  border-bottom: 4px double var(--berry-dark);
+  background: var(--pink);
+}
+
+header::after {
+  content: "✿  ❧  🍓  ❧  ✿";
+  position: absolute;
+  right: 18px;
+  bottom: 8px;
+  color: var(--berry);
+  font-size: 25px;
+  opacity: 0.8;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: var(--leaf-dark);
+  font:
+    bold 12px "Courier New",
+    monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+h1 {
+  max-width: 690px;
+  margin: 0;
+  color: var(--berry-dark);
+  font-size: clamp(30px, 5vw, 53px);
+  line-height: 0.98;
+  text-shadow: 2px 2px 0 #fff0c7;
+}
+
+.subtitle {
+  max-width: 640px;
+  margin: 14px 0 0;
+  font-size: 17px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 205px 1fr;
+  gap: 24px;
+  padding: 24px 24px 30px;
+}
+
+nav {
+  align-self: start;
+  padding: 12px;
+  border: 3px outset #a9bf78;
+  background: var(--matcha);
+  font-size: 14px;
+}
+
+nav h2 {
+  margin: 0 0 8px;
+  color: var(--leaf-dark);
+  font-size: 18px;
+}
+
+nav ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+nav li {
+  margin: 6px 0;
+}
+
+.notice {
+  padding: 9px 11px;
+  border: 2px dotted var(--berry);
+  background: #fff2a9;
+  font-size: 13px;
+}
+
+main {
+  min-width: 0;
+}
+
+.definition {
+  margin: 0 0 17px;
+  font-size: 17px;
+}
+
+.infobox {
+  float: right;
+  width: min(270px, 42%);
+  margin: 0 0 18px 20px;
+  border: 3px outset #a87553;
+  background: #fffdf0;
+  font-size: 13px;
+}
+
+.infobox-title {
+  padding: 8px;
+  color: #fff;
+  background: var(--leaf-dark);
+  font:
+    bold 16px "Trebuchet MS",
+    Verdana,
+    sans-serif;
+  text-align: center;
+}
+
+.terrarium-art {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #f8f1cf;
+  object-fit: contain;
+  border-bottom: 2px solid #7d603e;
+}
+
+.terrarium-art::before {
+  content: "☁     ☁";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  color: #fff8e7;
+  font-size: 25px;
+}
+
+.terrarium-art::after {
+  content: "♧  ◒  ♧";
+  position: absolute;
+  bottom: 19px;
+  left: 45px;
+  color: var(--leaf-dark);
+  font-size: 44px;
+  letter-spacing: 7px;
+  transform: rotate(-5deg);
+}
+
+.facts {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.facts th,
+.facts td {
+  padding: 6px 8px;
+  border-top: 1px dotted #a87553;
+  text-align: left;
+  vertical-align: top;
+}
+
+.facts th {
+  width: 42%;
+  color: var(--berry-dark);
+}
+
+h2 {
+  clear: both;
+  margin: 24px 0 7px;
+  padding: 4px 7px;
+  color: #fff;
+  background: var(--berry);
+  border: 2px outset #e7859f;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 16px 0 3px;
+  color: var(--leaf-dark);
+  font-size: 18px;
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.plant-card {
+  padding: 10px;
+  border: 2px solid var(--leaf-dark);
+  background: #edf3c8;
+  border-color: #66874c;
+  box-shadow: 3px 3px 0 #b7ca7d;
+}
+
+.plant-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  margin-bottom: 9px;
+  border: 2px inset #d2bd87;
+  background: #f8f1cf;
+  object-fit: cover;
+}
+
+.plant-card:nth-child(2) {
+  background: #f8d5df;
+  border-color: #a84c70;
+  box-shadow: 3px 3px 0 #dfa0b5;
+}
+
+.plant-card:nth-child(3) {
+  background: #d8e9b4;
+  border-color: #47733d;
+  box-shadow: 3px 3px 0 #9fbd76;
+}
+
+.plant-card:nth-child(4) {
+  background: #d4e8e7;
+  border-color: #397275;
+  box-shadow: 3px 3px 0 #8ebdbc;
+}
+
+.plant-card:nth-child(5) {
+  background: #ffd6d2;
+  border-color: #b14e55;
+  box-shadow: 3px 3px 0 #e7a09a;
+}
+
+.plant-card:nth-child(6) {
+  background: #ddd9ed;
+  border-color: #655b91;
+  box-shadow: 3px 3px 0 #aaa1d2;
+}
+
+.plant-card:nth-child(7) {
+  background: #d2e7d1;
+  border-color: #4f8055;
+  box-shadow: 3px 3px 0 #9fc49e;
+}
+
+.plant-card:nth-child(8) {
+  background: #fff0bd;
+  border-color: #a67c35;
+  box-shadow: 3px 3px 0 #e0bd6b;
+}
+
+.plant-card:nth-child(9) {
+  background: #cfe5bb;
+  border-color: #3d7043;
+  box-shadow: 3px 3px 0 #91b57d;
+}
+
+.plant-card h3 {
+  margin-top: 0;
+}
+
+.plant-card p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.latin {
+  color: #665347;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.care-list {
+  columns: 2;
+  padding-left: 24px;
+}
+
+footer {
+  padding: 12px 20px;
+  border-top: 4px double var(--berry-dark);
+  background: var(--sky);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    order: 2;
+  }
+
+  .infobox {
+    float: none;
+    width: 100%;
+    margin: 0 0 16px;
+  }
+
+  .plant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .care-list {
+    columns: 1;
+  }
+
+  header {
+    padding: 24px 20px 36px;
+  }
+}
