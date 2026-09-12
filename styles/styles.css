@@ -344,11 +344,32 @@ footer {
 
 @media (max-width: 720px) {
   .layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    display: contents;
+  }
+
+  #overview {
+    order: 1;
   }
 
   nav {
     order: 2;
+  }
+
+  #residents {
+    order: 3;
+  }
+
+  #care {
+    order: 4;
+  }
+
+  #sources {
+    order: 5;
   }
 
   .infobox {
